@@ -1,16 +1,25 @@
-## 🚀 Technologies
+<h1 align="center">
+    <img alt="FreelaTracker" title="FreelaTracker" src="./src/assets/logo.png" width="300px" />
+</h1>
+
+## 🚀 Tecnologias
 
 - [HTML]
 - [CSS]
-- [Typescript]
+- [TypeScript]
 - [Vue.JS]
+- [BulmaCSS]
 
-## Dependencies
+## 💻 Demo
 
-* Bulma: \
-`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">`
+Acesse a demo do site através deste link:
 
-* FontAwesome: \
-`npm i --save-dev @fortawesome/fontawesome-free`
+* [Clique aqui](https://rayanneblima.github.io/freela-tracker/)
+## 💻 Projeto
+
+Facilitando o gerenciamento das suas tarefas ⏰
+
+* Este é um projeto do curso de Vue.JS 3, oferecido pela **[@Alura](https://github.com/Alura)**.
 
 ---
+<p align="center">Desenvolvido com 💖 por Rayanne B. Lima</p>
