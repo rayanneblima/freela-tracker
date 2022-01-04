@@ -1,24 +1,16 @@
-# freela-tracker
+## 🚀 Technologies
 
-## Project setup
-```
-npm install
-```
+- [HTML]
+- [CSS]
+- [Typescript]
+- [Vue.JS]
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Dependencies
 
-### Compiles and minifies for production
-```
-npm run build
-```
+* Bulma: \
+`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">`
 
-### Lints and fixes files
-```
-npm run lint
-```
+* FontAwesome: \
+`npm i --save-dev @fortawesome/fontawesome-free`
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+---
