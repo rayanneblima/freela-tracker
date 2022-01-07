@@ -1,6 +1,9 @@
 <template>
-  <section class="has-text-right">
-    <strong class="timer-display">{{ elapsedTime }}</strong>
+  <section>
+    <span class="icon">
+      <i class="far fa-clock"></i>
+    </span>
+    <strong class="timer-display" :style="{ 'color': color }">{{ elapsedTime }}</strong>
   </section>
 </template>
 
@@ -15,6 +18,12 @@ export default defineComponent({
       default: 0,
       required: true,
       type: Number
+    },
+
+    color: {
+      default: '',
+      required: false,
+      type: String
     }
   },
 

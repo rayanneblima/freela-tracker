@@ -8,6 +8,10 @@
 - [CSS]
 - [TypeScript]
 - [Vue.JS]
+- [VueRouter]
+- [VueX]
+- [Mixins]
+- [Hooks]
 - [BulmaCSS]
 
 ## 💻 Demo
@@ -19,7 +23,7 @@ Acesse a demo do site através deste link:
 
 Facilitando o gerenciamento das suas tarefas ⏰
 
-* Este é um projeto do curso de Vue.JS 3, oferecido pela **[@Alura](https://github.com/Alura)**.
+* Este é um projeto inspirado no curso de Vue.JS 3, oferecido pela **[@Alura](https://github.com/Alura)**.
 
 ---
 <p align="center">Desenvolvido com 💖 por Rayanne B. Lima</p>

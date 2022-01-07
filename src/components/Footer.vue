@@ -1,10 +1,12 @@
 <template>
   <footer>
-    Freela<b>Tracker</b> - created by
-    <a href="http://rayanneblima.github.io/" target="_blank">
-      Rayanne B. Lima
-    </a>
-    with 💖
+    <span>
+      <span class="logo">Freela<b>Tracker</b></span> - created by
+      <a href="http://rayanneblima.github.io/" target="_blank">
+        Rayanne B. Lima
+      </a>
+      with 💖
+    </span>
   </footer>
 </template>
 
@@ -20,17 +22,27 @@ footer {
   background: var(--primary-bg);
   color: var(--primary-text);
   
-  align-items: center;
   bottom: 0;
-  display: flex;
-  flex-wrap: wrap;
   height: var(--footer-height);
-  justify-content: center;
-  position: relative;
+  vertical-align: middle;
+  position: absolute;
   width: 100%;
+}
+
+footer span {
+  padding-left: 20px;
+}
+
+footer .logo,
+footer a {
+  color: var(--orange);
 }
 
 footer a {
   margin-inline: 4px;
+}
+
+footer a:hover {
+  color: var(--green);
 }
 </style>

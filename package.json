@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "tek-components-vuejs": "git+ssh://git@192.168.254.201:web/components/vuejs/tek-components-vuejs.git",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.12",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",

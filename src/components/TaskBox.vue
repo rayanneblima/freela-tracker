@@ -1,5 +1,5 @@
 <template>
-  <div class="box has-text-weight-bold">
+  <div class="box has-text-weight-bold" :style="{ 'backgroundColor': bgColor }">
     <slot></slot>
   </div>
 </template>
@@ -8,12 +8,14 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: "TaskBox"
+  name: "TaskBox",
+
+  props: {
+    bgColor: {
+      default: "var(--orange)",
+      required: false,
+      type: String
+    }
+  }
 });
 </script>
-
-<style scoped>
-.box {
-  background: #DCC8CC;
-}
-</style>

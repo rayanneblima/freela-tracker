@@ -1,22 +1,15 @@
 <template>
   <main :class="{ 'dark-theme': darkTheme }">
     <div class="columns is-gapless is-marginless is-multiline">
-      <div class="column is-one-quarter-widescreen">
+      <div class="column is-one-fifth-widescreen">
         <AsideBar @onChangeTheme="handleChangeTheme" />
       </div>
-      <div class="column is-three-quarter-widescreen content">
-        <Form @onSaveTask="handleSaveTask" />
-
-        <div class="task-list">
-          <template v-if="!emptyTaskList">
-            <Task v-for="(task, index) in tasks" :key="index" :task="task" />
-          </template>
-
-          <TaskBox v-else> 😔 Você ainda não iniciou tarefas hoje. </TaskBox>
-        </div>
+      <div class="column is-four-fifth-widescreen content">
+        <Notification />
+        <router-view></router-view>
+        <Footer />
       </div>
     </div>
-    <Footer />
   </main>
 </template>
 
@@ -24,42 +17,25 @@
 import { defineComponent } from "vue";
 
 import AsideBar from "./components/AsideBar.vue";
-import Form from "./components/Form.vue";
-import Task from "./components/Task.vue";
-import TaskBox from "./components/TaskBox.vue";
+import Notification from "./components/Notification.vue";
 import Footer from "./components/Footer.vue";
-
-import ITask from "./interfaces/ITask";
 
 export default defineComponent({
   name: "App",
 
   components: {
     AsideBar,
-    Form,
-    Task,
-    TaskBox,
+    Notification,
     Footer,
   },
 
   data() {
     return {
-      darkTheme: false,
-      tasks: [] as ITask[],
+      darkTheme: false
     };
   },
 
-  computed: {
-    emptyTaskList(): boolean {
-      return !this.tasks.length;
-    },
-  },
-
   methods: {
-    handleSaveTask(task: ITask) {
-      this.tasks.push(task);
-    },
-
     handleChangeTheme(darkTheme: boolean) {
       this.darkTheme = darkTheme;
     },
@@ -75,23 +51,38 @@ export default defineComponent({
 
 ::-webkit-scrollbar-thumb:vertical,
 ::-webkit-scrollbar-thumb:horizontal {
-  background: #892a3d;
+  background: var(--light-violet);
   border-radius: 8px;
 }
 
+:root {
+  --dark-blue: #3D405B;
+  --orange: #E07A5F;
+  --green: #00D1B2;
+  --red: #F14668;
+  --yellow: #FFE08A;
+  --light-violet: #C8C9DC;
+  --black: #313131;
+  --white: #F2F2F2;
+  --primary-text: #4A4A4A;
+  --primary-bg: #ECE9EA;
+}
+
 main {
-  --primary-bg: #f2f2f2;
-  --primary-text: #313131;
-  --footer-height: 60px;
+  --primary-bg: #ECE9EA;
+  --primary-text: #4A4A4A;
+  --footer-height: 40px;
 }
 
 main.dark-theme {
-  --primary-bg: #313131;
-  --primary-text: #f2f2f2;
+  --primary-bg: #4A4A4A;
+  --primary-text: #ECE9EA;
 }
 
 .content {
   background: var(--primary-bg);
+  min-height: calc(100vh - var(--footer-height));
+  position: relative;
 }
 
 .task-list {
