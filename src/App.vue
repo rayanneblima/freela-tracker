@@ -6,7 +6,7 @@
       </div>
       <div class="column is-four-fifth-widescreen content">
         <Notification />
-        <router-view></router-view>
+        <router-view class="teste"></router-view>
         <Footer />
       </div>
     </div>
@@ -81,8 +81,12 @@ main.dark-theme {
 
 .content {
   background: var(--primary-bg);
-  min-height: calc(100vh - var(--footer-height));
   position: relative;
+}
+
+.teste {
+  min-height: calc(100vh - var(--footer-height));
+  padding-bottom: 20px;
 }
 
 .task-list {

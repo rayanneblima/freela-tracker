@@ -23,14 +23,13 @@ footer {
   color: var(--primary-text);
   
   bottom: 0;
-  height: var(--footer-height);
-  vertical-align: middle;
+  min-height: var(--footer-height);
   position: absolute;
   width: 100%;
 }
 
 footer span {
-  padding-left: 20px;
+  padding: 0 20px;
 }
 
 footer .logo,

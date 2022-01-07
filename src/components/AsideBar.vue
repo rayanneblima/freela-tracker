@@ -67,13 +67,19 @@ aside {
   
   height: 100vh;
   min-height: 100%;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 1rem;
   width: 100%;
 }
 
+aside h1 {
+  text-align: center;
+}
+
 aside img {
-  max-width: 220px;
+  max-width: 200px;
+  width: 100%;
 }
 
 .panel li {
@@ -92,10 +98,10 @@ aside img {
   color: #DCC8CC;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1150px) {
   aside {
     height: auto;
-    padding: 2.5rem;
+    width: 100vw;
   }
 }
 </style>
